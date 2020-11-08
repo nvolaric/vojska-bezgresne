@@ -1,0 +1,286 @@
+
+  
+.linkovi {
+    padding: 50px 0;
+}  
+.page-template-page_bezgresna {
+    footer.glavni {
+        background: $bezgresna;
+        color: darken($bezgresna, 30%);
+        a {
+            color: darken($bezgresna, 35%);              
+            &:hover {
+                color: darken($bezgresna, 65%);
+            }         
+        }        
+    }
+}
+
+.page-template-page_medaljica {
+    footer.glavni {
+        background: $medaljica;
+        color: darken($medaljica, 40%);
+        a {
+            color: darken($medaljica, 50%);              
+            &:hover {
+                color: darken($medaljica, 40%);
+            }           
+        }        
+    }
+    
+    .footer-kontakt {
+        h3 {
+            color: $medaljica;
+            border-bottom: 1px dashed darken($medaljica, 50%);
+        }
+        
+        p{
+            color: lighten($medaljica, 35%);
+            span {
+                color: lighten($medaljica, 5%);                
+            }
+        }
+        
+        p.biskupija {
+            color: lighten($medaljica, 25%);            
+        }
+        
+        a  {
+            color: lighten($medaljica, 15%);
+            
+            &:hover {
+                color: lighten($medaljica, 45%);
+            }
+            
+        }
+    }
+}
+
+.page-template-page_kolbe {
+    footer.glavni {
+        background: $kolbe;
+        color: lighten($kolbe, 40%);
+        a {
+            color: lighten($kolbe, 30%);              
+            &:hover {
+                color: lighten($kolbe, 45%);
+            }          
+        }        
+    }   
+    
+    .footer-kontakt {
+        h3 {
+            color: lighten($kolbe,45%);
+            border-bottom: 1px dashed $kolbe;
+        }
+        
+        p{
+            color: lighten($kolbe,40%);
+            span {
+                color: lighten($kolbe, 25%);                
+            }
+        }
+        
+        p.biskupija {
+            color: lighten($kolbe,40%);            
+        }
+        
+        a  {
+            color: lighten($kolbe, 15%);
+            
+            &:hover {
+                color: lighten($kolbe, 45%);
+            }
+            
+        }
+    }  
+}
+
+.page-template-page_vojska {
+    footer.glavni {
+        background: $vojska;
+        color: lighten($vojska, 40%);
+        a {
+            color: lighten($vojska, 30%);            
+            &:hover {
+                color: lighten($vojska, 45%);
+            }            
+        }    
+    }    
+    
+    .footer-kontakt {
+        h3 {
+            color: lighten($vojska,45%);
+            border-bottom: 1px dashed $vojska;
+        }
+        
+        p{
+            color: lighten($vojska,60%);
+            span {
+                color: lighten($vojska, 45%);                
+            }
+        }
+        
+        p.biskupija {
+            color: lighten($vojska,50%);            
+        }
+        
+        a  {
+            color: lighten($vojska, 35%);
+            
+            &:hover {
+                color: lighten($vojska, 45%);
+            }
+            
+        }
+    }  
+}
+
+
+
+.page, .post, .single, .category, .archive, .search {
+    .karta {
+        display:none;
+    }
+}
+
+#nav-wrap.footer {
+    display:none !important;
+}
+
+.page-id-701 {
+    .karta {
+        display:block;
+    }
+}
+
+.footer-kontakt {
+    display: none;
+    background: url(../../assets/images/sct-kolbe-bg.jpg) repeat center top; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+        background-size: cover;
+    font-size: 1.2rem;
+    padding: 20px 0;
+    
+    .karta {
+        h1 {
+            color: lighten($brand-primary, 45%);
+            
+        }
+        
+        h3 {
+            margin-top: 0;;
+            border: none;
+            color: lighten($brand-primary, 65%);
+        }
+        
+        img {
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+    div {
+        margin-bottom: 15px;
+            text-align: center;
+    }
+    h3 {
+        border-bottom: 1px dotted darken($brand-primary, 5%);
+        font-size:1.5rem;
+        color: lighten($brand-primary, 35%);
+        text-transform: uppercase;
+        padding: 3px 0 4px 0;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    p {
+            color: lighten($brand-primary, 65%);
+        padding: 0;
+        margin: 0 0 5px 0;
+        line-height: 1.4rem;
+        
+        span {
+        color: #FFFFFF;
+        color: lighten($brand-primary, 55%);
+            
+        }
+    }
+        
+    p.biskupija {
+        color: lighten($brand-primary, 45%);
+        text-transform: uppercase;
+    text-align: center;
+        margin-bottom: 15px;
+    }
+    a {
+    text-align: left;
+            color: lighten($brand-primary, 65%);
+        &:hover {
+            color: lighten($brand-primary, 45%);
+            
+        }
+    }
+    
+}
+
+.citat.footer {
+    background: #204c7e url(../../assets/images/sct-vojska-bg.png) repeat center top;
+    background: lighten($brand-primary,7%);
+    .container {
+        
+    }
+    p {
+        color: #FFF;
+    }    
+}
+
+footer.glavni {   
+    background: $brand-primary;
+    color: lighten($brand-primary, 30%);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    
+    p {
+        margin: 0;
+    }
+    a {
+    color: lighten($brand-primary, 60%);
+        &:hover {
+            color: lighten($brand-primary, 17%);
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    #nav-wrap.footer {
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        display:block !important;
+        ul {
+                text-align: center;
+            margin: 0 auto;
+            float: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    
+.footer-kontakt {
+         display: block;
+    }
+    .citat.footer {
+        .container {
+            padding:50px 120px 30px 120px;
+        }
+        p {
+            color: #FFF;
+        }    
+    }
+}

@@ -1,0 +1,1050 @@
+@import "common/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+body  {
+    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size:62.5%;
+}
+
+body.linkovi {
+    padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $brand-primary;
+        text-shadow: 0px 0px 2px rgba(150, 150, 150, 0.4);
+}
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: rgba(0,0,0,0.6) url("../../assets/images/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+a:hover.back-to-top {
+	background-color: #000;
+}
+
+
+section.citat {
+    background: url(../../assets/images/white_wall_hash.png) repeat;
+    
+    &.prvi {
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #E2E2E2;
+    }
+    .container {        
+        padding: 40px 40px;
+    }
+    p {
+        span {
+            color: $brand-primary;
+            
+        }
+        color: #4e4e4e;
+        text-align: center;
+        font-style: italic;
+        font-size: 2rem;
+       // font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        line-height: 2.2rem;
+        padding: 0px 0;
+        text-shadow: 0px 0px 2px rgba(150, 150, 150, 0.4);
+    }
+    p.autor-citata {
+         text-align: right;
+        font-style: normal;
+        font-size:1.6rem;
+    }
+} 
+
+section.video {
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #E2E2E2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.video-responsive{
+    //overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    clear:both;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+section.vijesti {
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #E2E2E2;
+    padding-bottom: 70px;
+    .posts {
+        clear: both;
+        margin-top: 15px;;
+        article {
+            height: 160px;
+            margin-bottom: 30px;
+            .post-image {
+                position: relative;
+                .datum {
+                    display:none;
+                    position: absolute;
+                    bottom:2px;
+                    width: 100%;
+                    lef: 2px;
+                    padding: 3px 25px;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    background: rgba(0,0,0,0.3);
+                }
+            }
+            .no-thumb {
+                height: 161px;
+                width: 255px;
+                background: #F3F3F3;
+            }
+            img {
+                width: auto;
+                height: auto;
+               max-width: 100%; 
+                border: 2px solid #eee;
+              -webkit-transition : border 200ms ease-out;
+              -moz-transition : border 200ms ease-out;
+              -o-transition : border 200ms ease-out;
+              transition : border 200ms ease-out;
+            } 
+            h2 {
+                font-size: 1.7rem;
+                margin: 6px 0 0 0;-ms-word-wrap: break-word;
+word-wrap: break-word;
+            }
+            
+            a {
+             
+                &:hover {
+                    text-decoration: none;
+                    img {
+                border: 2px solid lighten($brand-primary,19%);
+                    }
+                    .post-image .datum {
+                        display: block;
+                    }
+                    .no-thumb {
+                        background: #EFEFEF;
+                        background: lighten($brand-primary,19%);;
+                    }
+                } //a: hover
+            } // a
+        } //article
+    } //posts
+}
+
+section.vijesti .opsirnije, .nav-links {
+        clear: both;
+        a {
+            background: #FCFCFC;
+            border: 1px solid #F3F3F3;
+            color: $brand-primary;
+            display: block;
+            float: right;
+            margin-right: 17px;
+            padding: 10px 15px;
+            font-size: 1.8rem;
+            text-align: center;
+          -webkit-transition : all 200ms ease-out;
+          -moz-transition : all 200ms ease-out;
+          -o-transition : all 200ms ease-out;
+          transition : all 200ms ease-out;
+
+            @include border-radius(7px)
+
+            &:hover {
+                background: $brand-primary;
+                color: #FFF;
+                text-decoration: none;
+            }
+        }
+    }
+.nav-links {
+    .nav-next {
+        float: left;
+    }
+}
+
+
+h1.heading {
+    background: url(../../assets/images/logo-heading.png) no-repeat left center;
+    margin-left: 20px;
+    margin-top: 60px;
+    padding-left: 35px;
+    font-size: 3rem;
+}
+
+section.najave {
+    background: url(../../assets/images/white_wall_hash.png) repeat;
+    padding-bottom: 70px;
+    border-top: 1px solid #eee;
+    a {
+        .datum-najave {
+            background: #FCFCFC;
+            float: none;
+            font-size:1.9rem;
+            font-weight: bold;
+            line-height: 2rem;
+            color: $brand-primary;
+            padding: 5px 20px 5px 20px;
+            width: auto;
+            border-right: 1px solid #F3F3F3;
+            text-align: left;
+              -webkit-transition : all 200ms ease-out;
+              -moz-transition : all 200ms ease-out;
+              -o-transition : all 200ms ease-out;
+              transition : all 200ms ease-out;
+        }
+        
+        .naslov-najave {
+            background: #FFFFFF;
+            padding: 5px 5px;
+            padding-left: 20px;
+            margin-bottom:8px;
+            h2 {
+                font-size: 1.8rem;
+                line-height: 2rem;
+                margin: 0;
+            }
+        }
+        
+        &:hover {
+            text-decoration: none;
+            .datum-najave {
+                background: $brand-primary;
+                color: #FFFFFF;
+            }
+            .naslov-najave {
+                h2 {font-weight: normal}
+            }
+        }
+    }
+    a:last-child {
+        .datum-najave {
+        }
+        .naslov-najave {
+        }
+    }
+}
+
+section.istaknuto {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+        background-size: cover;
+    h2 {
+            font-size: 4rem;
+            margin-top: 50px;
+            text-shadow: 1px 1px 4px rgba(150, 150, 150, 0.9);
+        
+    }
+    
+    h3 {
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        
+        
+    }
+    
+    h5 {
+            float: right;
+            font-size: 1.6rem;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        
+    }
+    
+    p {
+            font-size: 1.6rem;
+            clear: both;
+            color: white;
+        
+    }
+    
+    hr {
+            border: 0;
+            height: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    
+    hr.clear-both {
+        clear: both !important;
+    }
+    
+    
+    .section-menu {
+        ul {
+            font-size: 1.8rem;
+            line-height: 1.6rem;
+    margin:0;
+    padding: 0;
+            
+            li {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+                a {
+                    background: rgba(255,255,255,0.1);
+                    display: block;
+                    height: 40px;
+                    text-align: center;
+                    padding: 10px 20px;
+                  -webkit-transition : background 100ms ease-out;
+                  -moz-transition : background 100ms ease-out;
+                  -o-transition : background 100ms ease-out;
+                  transition : background 100ms ease-out;
+                
+                    &:hover {
+                        text-decoration: none;
+                    background: rgba(255,255,255,0.4);
+                    }
+                }
+                
+            }
+            
+        }
+        
+        
+        
+    }
+}
+
+section.bezgresna {
+    background: #348fd1 url(../../assets/images/sct-bezgresna-bg.jpg) repeat center center;
+    border-top: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    
+    .tekst {
+        h2{
+            color:#eaebaa;
+        }
+        h3 {
+            color:#e3ebaa;
+            text-align: center;
+            width: 100%;
+
+        }
+        h5 {
+            color: #FFFFFF;  
+            margin-bottom: 30px;              
+        }
+        p {
+        }
+        p.autor-citata {
+            
+        }
+        
+    }
+    
+    .meni-bezgresna {
+        margin-bottom: 30px;
+        right: 0;
+        
+    }
+    ul {
+        clear: both;
+
+        li{
+
+            a {
+                color: #FFF;
+                border-color: #eaebaa;
+                font-variant: small-caps;
+                width: 100%;
+                margin-bottom:15px;
+                
+            }
+
+        }
+
+    }
+}
+
+
+section.medaljica {
+    background: #e4c865 url(../../assets/images/sct-medaljica-bg.jpg) repeat center top; 
+    border-top: 1px solid #e4c865;
+    border-bottom: 1px solid #e4c865;
+    
+    h2 {
+        color: #FFF;
+    }
+    
+    p {
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    hr {
+        clear: left;
+        margin-top: 30px;
+    }
+    p.bernardica {
+        color: #73471e;
+        font-size: 1.9rem;
+        padding: 0 15px;
+        text-align: center;
+        font-style: italic;
+    }
+    h5 {
+        color: darken(#73471e,7%);
+        margin-right: 70px;
+    }
+    
+    .section-menu {
+        ul {
+                clear: both;
+            
+            li  {
+                
+                a {
+                font-variant: small-caps;
+                color: #73471e;
+                width: 100%;
+                margin-bottom:15px;  
+                }
+            }
+        }
+    }
+    
+}
+
+section.kolbe {
+    background: #e4c865 url(../../assets/images/sct-kolbe-bg.jpg) repeat center top; 
+    border-bottom:1px solid #4E4E4E;
+    border-top:1px solid #4E4E4E;
+    
+    h2 {
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        line-height: 3.5rem;
+        
+        .kruna {
+            display: none;
+        }
+    }
+    p.osnivac {
+        text-align: center;
+        color: #a4212c;
+        margin-top: -10px;
+    }
+    
+        img.kolbe {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            border-bottom: 5px solid #000;
+        }
+    
+    .meni-kolbe {
+        h3 {
+            color: #a4212c;
+            padding-left: 20px;
+        }
+        ul {
+            li {
+                a {
+                    background: rgba(255,255,255,0.04);
+                    color: #FFFFFF;
+                    height: auto;
+                    margin-top: 10px;
+                
+                    &:hover {
+                    background: rgba(255,255,255,0.1);
+                    }
+
+                }
+            }
+        }
+    }
+    
+    p.kolbe-citat {
+        margin-top: 35px;
+        font-style: italic;
+        text-align: center;
+        padding: 5px 15px;
+        span {
+            display: block;
+            margin-top: 15px;
+            color: #a4212c;
+        }
+        
+        span.autor {
+            color: #888;
+            text-align: right;
+            font-style: normal;
+            font-size: 1.2rem;
+            margin-top: 5px;
+            padding-right: 15px;
+        }
+    }
+    
+    .kolbe-slike {
+        max-width: 100%;
+        margin-top:20px;
+        padding-bottom: 20px;
+    }
+}
+
+section.kolbe-75 {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    .menu-75 {
+        padding-top: 30px;
+        h2, h3, h4 {
+            color: #b1232f;  
+                font-weight: bold;
+            text-shadow: none;
+            text-align: center; 
+            margin: 0;           
+        }
+        h2 {
+            font-size: 3.5rem;
+
+        }
+        h3 {
+            font-size: 2.4rem;
+
+        }
+        h4 {
+            font-size: 2rem;
+            font-weight: normal;
+            margin-top: 5px;
+
+        }
+    }
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    
+    .section-menu.meni-kolbe75 {
+                margin-top:45px; 
+        ul {
+            
+            li {
+                margin-top:10px; 
+                
+                a {
+                    background: #b1232f;
+                    color: #FFFFFF;
+                    font-weight: bold;
+                    height: auto !important;
+                    padding: 9px 20px !important;
+                    
+                    &:hover {
+                    background: rgba(0,0,0,0.1);
+                        color: #b1232f;
+                        
+                        
+                    }
+                    
+                }
+            }
+        }    
+    
+    }
+    
+    
+    
+}
+
+section.vojska {
+    background: #204c7e url(../../assets/images/sct-vojska-bg.png) repeat center top; 
+    padding: 0px 0 0px 0;
+    
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    
+    img.vojska {
+        margin-top: 20px;
+        float: left;
+        
+    }
+    
+        
+    .section-menu.meni-vojska {
+                margin-top:25px; 
+        clear: both;
+        ul {
+            
+            li {
+                margin-top:10px; 
+                
+                a {
+                    color: #FFFFFF;
+                    height: auto !important;
+                    padding: 9px 20px !important;
+                    
+                    &:hover {
+                        
+                        
+                    }
+                    
+                }
+            }
+        }    
+    
+    }
+}
+
+section.citat.footer {
+    border-top: 1px solid lighten($brand-primary, 13%);
+    border-bottom: 1px solid lighten($brand-primary, 13%);
+}
+
+
+
+@media only screen and (min-width: 500px) {
+    
+    section.vijesti {
+        .posts article {
+                height: 200px;                
+            }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    
+    section.vijesti {
+        .posts article {
+                height: 230px; 
+            
+                h2 {
+                    font-size: 2.3rem;
+                    height: 45px;
+                }
+            }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+        section {
+        .section-menu {
+            ul {
+                li{
+                    margin-right: 15px !important;
+                    a {
+                        height: 60px !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    section.bezgresna {
+        .section-menu {
+            ul {
+                li{
+                    margin-right: 1%;
+                    float: left;
+                        display: block;
+                        width: 30%;
+                    a {
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    section.medaljica {
+        .section-menu {
+            ul {
+                li{
+                    margin-right: 1%;
+                    float: left;
+                        display: block;
+                        width: 17%;
+                    a {
+                        height: 88px !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    section.istaknuto.kolbe {
+
+        h2 {
+            font-size: 4rem;
+            
+            .kruna {
+                display:inline;
+                width: 70px;
+                height: 70px;
+                margin-top: -15px;
+            }
+        
+            .bijela {
+                margin-right: 60px;
+            }   
+            .crvena {
+                margin-left: 60px;
+                
+            }
+        }
+        
+        p.osnivac {
+            margin-top: -20px;
+        }     
+        
+        
+        
+        .meni-kolbe {
+            h3 {
+                font-size: 2rem;
+            }
+            ul {
+                li {
+                    a {
+                        height: auto !important;
+
+                        &:hover {
+                        }
+
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    section.istaknuto {
+        h2 {
+                font-size: 6rem;
+                margin-top: 50px;
+                text-shadow: 1px 1px 4px rgba(150, 150, 150, 0.9);
+
+        }
+
+
+        h3 {
+                font-size: 3rem;   
+        }
+
+        p {
+                font-size: 2.3rem;
+
+        }
+
+    }
+
+
+    section.citat {
+        .container {        
+            padding: 80px 120px;
+        }
+            p {
+            font-size: 2.8rem;
+            line-height: 3.3rem;
+
+            }
+            p.autor-citata {
+                font-size: 1.8rem;
+            }
+        }
+
+    section.vijesti {
+        .posts {
+            article {
+                margin-bottom: 60px;
+                height: 220px;
+                .no-thumb {
+                }
+                img {
+                } 
+                h2 {
+                    font-size: 2.3rem;
+                    height: 45px;
+                }
+
+                a {
+
+                    &:hover {
+                        img {
+                        }
+                        .no-thumb {
+                        }
+                    }
+                    }
+                }
+            }
+        }
+    
+    
+    section.vojska {
+        
+        img.vojska {
+            margin-top: 0;
+            }
+    }
+    
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+    
+    section.vijesti {
+        .posts {
+            article {
+                height: 175px; 
+            }
+        }
+    }
+    section.najave {
+        a {
+            .datum-najave {
+                float: left;
+                text-align: right;
+                font-size:1.9rem;
+                line-height: 3.5rem;
+                padding: 5px 20px 5px 5px;
+                width: 180px;
+            }
+
+            .naslov-najave {
+                padding-left: 200px;
+                h2 {
+                    font-size: 1.8rem;
+                    line-height: 3.5rem;
+                }
+            }
+
+            &:hover {
+                text-decoration: none;
+                .datum-najave {
+                }
+                .naslov-najave {
+                    h2 {font-weight: bold}
+                }
+            }
+        }
+        a:last-child {
+            .datum-najave {
+            }
+            .naslov-najave {
+            }
+        }
+    }
+    
+    
+
+    section.bezgresna {
+        .tekst {
+            padding-left: 370px;
+            padding-right: 5%;
+        }
+    }
+    
+    section.medaljica {
+        
+        .section-menu {
+            ul {
+                li{
+                    margin-right: 1%;
+                    float: left;
+                        display: block;
+                        width: 18%;
+                    a {
+                        height: 60px !important;
+                    }
+                }
+            }
+        }
+    img {
+        float: right;
+        margin-top: -70px;
+    }
+    } 
+    
+    section.istaknuto.kolbe {
+        
+        .container {
+
+            background: url(../../assets/images/kolbe.png) no-repeat center 150px; 
+        }
+        
+        .kolbe {
+            display: none;
+        }
+        
+        hr.clear-both {
+            display: none !important;
+        }
+        
+        .meni-kolbe {
+                margin-top: 70px;
+               width: 30%;
+            float: left;
+            ul {
+                li {
+                    a {
+
+                    }
+                }
+            }
+        }
+        
+    p.kolbe-citat {
+            margin-top: 110px;
+            width: 30%;
+            float: right;
+            span {
+                line-height: 2.5rem;
+
+            }
+        }
+        
+    }
+    
+    
+    section.kolbe-75 {
+        .menu-75 {
+            float: left;
+            padding: 50px 50px;
+            margin-top: 10px;
+            margin-left: 30px;
+
+            h2, h3, h4 {
+                color: #a4212c;  
+            }
+            h2 {
+                font-size: 4rem;
+
+            }
+            h3 {
+                font-size: 2.8rem;
+
+            }
+            h4 {
+                font-size: 2.5rem;
+
+            }
+            
+    .section-menu.meni-kolbe75 {
+                ul {
+                    li {
+                        a {
+                            height: auto !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            float: right;
+            margin-right: 30px;
+            margin-top: 50px;
+        }
+        
+    }
+    
+    
+    section.vojska {
+        .left {            
+            float: left;
+            padding: 50px 50px;
+            margin-top: 10px;
+            margin-left: 30px;
+            max-width: 45%;
+        }
+        
+        img {
+            float: right;
+            margin-right: 30px;
+            margin-top: 50px;
+        }
+        ul {
+            
+            li {
+                
+                a {
+                    
+                    &:hover {
+                        
+                        
+                    }
+                    
+                }
+            }
+        }    
+    
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    
+    section.vijesti {
+        .posts article {
+                height: 210px;                
+            }
+    }
+}
+

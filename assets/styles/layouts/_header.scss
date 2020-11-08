@@ -1,0 +1,739 @@
+.page-template-page_bezgresna header.banner .wrap-head{ background: lighten($bezgresna,6%);}
+.page-template-page_medaljica header.banner .wrap-head{ background: darken($medaljica,6%); }
+.page-template-page_kolbe header.banner .wrap-head{ background: darken($kolbe,6%);}
+.page-template-page_vojska header.banner .wrap-head{ background: darken($vojska,6%);}
+
+.page-template-page_bezgresna #nav-wrap{ background: $bezgresna }
+.page-template-page_medaljica #nav-wrap{ background: $medaljica }
+.page-template-page_kolbe #nav-wrap{ background: $kolbe }
+.page-template-page_vojska #nav-wrap{ background: $vojska }
+
+
+header.banner {
+        background: $brand-primary;
+    
+    .wrap-head {
+        @include linearGradient($brand-primary, lighten($brand-primary,5%));  
+        padding-bottom: 20px;
+    }
+    
+    .container {
+        position: relative;
+    }
+
+    h1 {
+       font-size: 0;
+       text-indent: -1000px;
+    }
+    
+    a.logo-vojska img{   
+        padding:10px 0;
+        max-width: 100%;
+        height: auto;
+    }
+        
+    .ljubav-stvara img {
+        display: block;
+        margin: 0 auto;
+        margin-top:20px;
+
+    }  
+    
+    a.logo-mi { 
+        display: none;
+        position: absolute;
+        right: 0;
+            top: 25px;
+    }
+    
+    .molitva {
+        display:block;
+        color: #FFFFFF;
+        font-size: 2rem;
+        padding: 40px 40px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+        
+    h3 {
+        color: #FFFFFF;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+    
+    .navbar-header {        
+        .icon-bar {
+            background-color: white
+        }
+    }
+    
+    .naslov {
+        display: block;
+        padding: 20px 50px;
+        h1 {
+            font-size: 5rem;
+            color: white;
+        }
+    }
+    
+    .search-form {
+        display: none;
+    }
+    
+    
+    
+    .menu-istaknuto {
+        display:none;
+        width: 100%;
+        background:  $brand-primary;
+        border-bottom: 8px solid $brand-primary;
+        @include linearGradient(lighten($brand-primary,5%), darken($brand-primary,7%));  
+        
+        .four-menu {
+            margin: 30px 0;
+            position: relative;
+            .box {
+                height: 167px;
+                width: 282px;
+                margin: 0 auto;
+                border: 1px solid lighten($brand-primary,27%);
+                border: 1px solid lighten($brand-primary,17%);
+                border: 2px solid #123D6F;
+                border: 2px solid darken($brand-primary,0%);
+                @include border-radius(7px);
+                ///@include border-top-radius(10px)
+                
+                -webkit-box-shadow: inset 4px 1px 34px -1px rgba(0,0,0,0.5);
+                -moz-box-shadow: inset 4px 1px 34px -1px rgba(0,0,0,0.5);
+                box-shadow: inset 4px 1px 34px -1px rgba(0,0,0,0.5);
+            }
+            
+            h1, h4 {
+                display: block;
+                color: #FFF;
+                font-size: 1.8rem;
+                font-style: normal;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 4px 0 0 0;
+                width: auto;
+                margin: 0;
+                background: none !important;
+                text-indent: 0 !important;
+            }
+            
+            h4 {
+                font-size: 1.4rem;
+                color: lighten($brand-primary,50%);
+                padding: 0;
+            }
+            
+            
+            .fmenu-hover {
+                ul {
+                    display:none;
+                    margin: 0; padding: 5px 15px 0 15px; 
+                    
+                    li {
+                        display: block;
+                        margin: 0; padding: 0; 
+                        position: relative; 
+                        text-align: center;
+                        
+                        a {
+                            display: block;
+                            font-size: 1.4rem;
+                            //font-weight: bold;
+                            font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+                            line-height: 1.5rem;
+                            padding: 3px 10px 2px 10px;
+                            border-bottom: 1px solid rgba(255,255,255,0.05);
+                            
+                            &:hover {
+                                background: rgba(0,0,0,0.1);
+                                text-decoration: none;
+                            }
+                            
+                            
+                        }
+                        
+                    
+                    }
+                    
+                    li:last-child a {                          
+                                border-bottom: 0px;
+                    }
+                    
+                    
+                    
+                }
+                
+            }
+            &:hover {
+                .box {
+                    background-image: none;
+                    .fmenu-hover ul {
+                        display: block;
+                    }
+                }
+                
+            }
+        }
+        
+        .bezgresna .box {
+            background: $bezgresna url(../../assets/images/fmenu-bezgresna.jpg) no-repeat center center;
+                -webkit-background-size: cover;
+                background-size: cover;
+            .fmenu-hover a {
+                color: #FFF;
+            }
+        }
+        
+        .medaljica .box {
+            background: $medaljica url(../../assets/images/fmenu-medaljica.jpg) no-repeat center center;
+            .fmenu-hover a {
+                color: darken($medaljica, 58%);
+            }
+        }
+        
+        .kolbe .box {
+            background: $kolbe url(../../assets/images/fmenu-kolbe.jpg) no-repeat center center;
+            .fmenu-hover a {
+                color: lighten($kolbe, 38%);
+                color: #FFF;
+            }
+        }
+        
+        .vojska .box {
+            background: $vojska url(../../assets/images/fmenu-vojska.jpg) no-repeat center center;
+            .fmenu-hover a {
+                color: lighten($vojska, 58%);
+                color: #FFF;
+            }
+        }
+        
+    }
+    
+}
+
+
+    #nav-wrap {
+        background: $brand-primary;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-bottom: 5px;
+        margin-bottom: -1px;
+            z-index: 10000;
+            width: 100%;
+        img.logo {
+            display:none;
+            height: 35px;
+            width: auto;
+            float: left;
+            margin-top: 6px;
+            margin-left: 50px;
+        }
+        
+        .logo-facebook {
+            float: right;
+            img {
+                margin:13px 15px 0 10px;
+                max-height: 20px;
+                width: auto;
+            }
+        }
+                       
+        
+    }
+
+
+    #main-nav ul    {
+        margin: 0; padding: 0; /* only needed if you have not done a CSS reset */ 
+    }
+
+    #main-nav li    {
+        display: block;
+        margin: 0; padding: 0; 
+        position: relative; 
+    }
+
+#main-nav li.first a {
+    height: 24px;
+    padding: .75rem 1.5rem;
+    .home-icon {
+        height: 20px;
+        width: 20px;
+        background: url(../../assets/images/home-icon.png) no-repeat center center;
+    }
+    &:hover {
+        .home-icon {
+            background: url(../../assets/images/home-icon-hover.png) no-repeat center center;
+            
+        }
+    }
+}
+
+    #main-nav li a  {
+        display: block;
+        padding: .75rem 0.5rem;
+        font-size: 2rem;
+        text-align: center;
+        color: white; 
+        line-height: 4.5rem;
+        height: 6rem;
+            border-bottom: 1px solid transparent;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+        &:hover {
+             text-decoration: none !important;   
+        }
+        &:active {
+            background: rgba(0,0,0,0.4);
+        }
+    }
+
+    #main-nav li:hover > a {
+        color: lighten($brand-primary,57%);
+        color: rgba(255,255,255,0.7);
+    }
+
+/*******************************/
+
+
+/*
+
+#main-nav li#menu-item-167 a {
+    padding:0 22px !important;
+}
+
+#main-nav li:first-child a   { border-left: none !important; }
+#main-nav li:last-child a   { border-right: none; }
+
+
+
+
+#main-nav .current-menu-item a, #main-nav .current_page_item a {
+    color: $brand-primary;
+}
+
+
+#main-nav li:hover > a {
+    background: $brand-primary url(../images/bg-slideshow.png) repeat;
+    background: none;
+    background: darken(#FFFFFF,6%);
+    color: #FFFFFF;
+    color: $brand-primary;
+}
+
+
+/**** Home-srce ****//*
+
+#main-nav li#menu-item-167   {  background:url(../images/home-srce.png) no-repeat center center !important; }
+#main-nav li#menu-item-167:hover{background: darken(#FFFFFF,6%) url(../images/home-srce-active.png) no-repeat center center !important; }
+#main-nav li#menu-item-167.current-menu-item{background: url(../images/home-srce-active.png) no-repeat center center !important; }
+#main-nav li#menu-item-167.current-menu-item:hover{background: darken(#FFFFFF,6%) url(../images/home-srce.png) no-repeat center center !important; }
+#main-nav li#menu-item-167:hover > a {
+    background:none  !important; 
+}
+
+
+/*** Menu second - level ***//*
+
+#main-nav ul ul { /* this targets all sub menus *//*
+    border: 1px solid #DEDEDE;
+    //border-top: 1px solid darken($brand-primary,2%) !important;
+    z-index: 999;
+    display: none; /* hide all sub menus from view *//*
+    position: absolute;
+    top: 65px; /* this should be the same height as the top level menu -- height + padding + borders *//*
+        -webkit-box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+        -moz-box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+        box-shadow: 2px 2px 10px rgba(0,0,0,.5)
+    
+}
+
+#main-nav ul ul li { /* this targets all submenu items *//*
+    float: none; /* overwriting our float up above *//*
+    width: 300px; /* set to the width you want your sub menus to be. This needs to match the value we set below *//*
+    height: 40px;
+    line-height: 40px;
+}
+/*
+#main-nav ul ul li a { /* target all sub menu item links *//*
+    background: $brand-primary url(../images/bg-slideshow.png) repeat;
+    background: darken(#FFFFFF,6%);
+    color: $text-gray;
+    border: none !important; 
+    border-bottom: 1px solid darken(#FFFFFF,8%) !important;
+    font-size: 1.6rem;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px; /* give our sub menu links a nice button feel *//*
+}
+
+#main-nav ul ul li:hover > a {
+    background: darken(#FFFFFF,8%);
+    color: $brand-primary;
+}
+
+#main-nav ul li:hover > ul {
+     /* show sub menus when hovering over a parent *//*
+}
+
+/**** Menu third level ***//*
+#main-nav ul ul li ul {
+    /* target all second, third, and deeper level sub menus *//*
+    left: 300px; /* this needs to match the sub menu width set above -- width + padding + borders *//*
+    top: 0; /* this ensures the sub menu starts in line with its parent item *//*
+}
+
+#main-nav ul ul li ul a{
+    background: darken(#FFFFFF,8%);
+    border-bottom: 1px solid darken(#FFFFFF,10%) !important;
+}
+
+#main-nav ul ul li ul a:hover{
+    background: darken(#FFFFFF,10%);
+}
+
+
+
+/*******************************/
+
+
+@media only screen and (min-width: 600px) {
+
+    header.banner {        
+        .ljubav-stvara {
+            position: absolute;
+            right: 10px;
+            top: 30px;
+        }  
+        
+        
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .page-template-page_bezgresna header.banner .wrap-head{ background: lighten($bezgresna,6%) url(../../assets/images/bezgresna-bg.png) no-repeat center bottom;}
+.page-template-page_medaljica header.banner .wrap-head{ background: darken($medaljica,6%) url(../../assets/images/medaljica-bg.png) no-repeat center bottom; }
+.page-template-page_kolbe header.banner .wrap-head{ background: darken($kolbe,6%) url(../../assets/images/kolbe-bg.png) no-repeat center bottom;}
+.page-template-page_vojska header.banner .wrap-head{ background: darken($vojska,6%) url(../../assets/images/vojska-bg.png) no-repeat center bottom;}
+
+    .nav-container {
+        width: 100% !important;
+    }
+    .single header.banner,
+    .page header.banner {
+        
+        .ljubav-stvara {
+            right: 25px !important;
+
+        }
+        
+    }
+    .home header.banner {
+        .ljubav-stvara {
+          //  right: 240px;
+        }        
+    }    
+
+    .menu-istaknuto {
+        display: block !important;
+    }
+    
+    #main-nav ul {
+        float: left;
+    }
+
+    #main-nav li    {
+        display: inline-block;
+        margin: 0; padding: 0; 
+        position: relative; 
+    }
+
+    #main-nav li a  {
+        font-size: 1.3rem;
+        color: white; 
+        line-height: 3.2rem;
+        height: 4rem;
+            border-bottom: none;
+            box-shadow: none;
+
+        &:active {
+            background: none;
+            color: rgba(0,0,0,0.5);
+        }
+
+    }
+    header.banner {
+    .menu-istaknuto {
+        
+        .four-menu {
+            margin: 60px 0;
+                h3 {
+                }
+            
+        }
+        
+    }
+        .molitva {
+            padding: 60px 40px;
+        }
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+    
+    .nav-container {
+        width: 970px !important;
+    }
+    
+    header.banner {   
+        .logo-vojska{
+            margin-left: 60px;
+        }    
+        .logo-mi {
+            display: block !important;
+            right: 60px !important;
+        }    
+        .ljubav-stvara {
+            right: 220px !important;
+        } 
+        .molitva {
+        }
+    }
+    
+    .home.page header.banner {
+            .ljubav-stvara {
+                right: 240px !important;
+        }
+        
+    }
+    .page header.banner {
+            .ljubav-stvara {
+                right: 120px !important;
+        }
+        
+    }
+    
+}
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    
+    .nav-container {
+        width: 1170px !important;
+    }
+    header.banner {  
+        .ljubav-stvara {
+            right: 320px;
+        } 
+    }
+    
+    
+
+    #main-nav li a  {
+        font-size: 1.5rem;
+
+
+    }
+    
+    
+    .page-template-page_bezgresna header.banner .search-form{ 
+        input[type=search],
+        input[type=submit] {
+            background-color: $bezgresna;
+            color: lighten($bezgresna,16%);
+            border-color: darken($bezgresna,5%);
+            
+                &:hover {
+                border-color: darken($bezgresna,15%);
+                    
+                }
+        }
+        
+            input.search-field::-webkit-input-placeholder {
+            color: lighten($bezgresna,16%);
+            }
+            input.search-field::-moz-placeholder {
+            color: lighten($bezgresna,16%);
+            }
+            input.search-field:-moz-placeholder {
+            color: lighten($bezgresna,16%);
+            }
+            input.search-field:-ms-placeholder  {
+            color: lighten($bezgresna,16%);
+            }
+        
+    }
+    .page-template-page_medaljica header.banner .search-form{ 
+        input[type=search],
+        input[type=submit] {
+            background-color: $medaljica;
+            color: lighten($medaljica,16%);
+            border-color: darken($medaljica,5%);
+            
+                &:hover {
+                border-color: darken($medaljica,15%);
+                    
+                }
+        }
+        
+            input.search-field::-webkit-input-placeholder {
+            color: lighten($medaljica,16%);
+            }
+            input.search-field::-moz-placeholder {
+            color: lighten($medaljica,16%);
+            }
+            input.search-field:-moz-placeholder {
+            color: lighten($medaljica,16%);
+            }
+            input.search-field:-ms-placeholder  {
+            color: lighten($medaljica,16%);
+            }
+    }
+    .page-template-page_kolbe header.banner .search-form{ 
+        input[type=search],
+        input[type=submit] {
+            background-color: $kolbe;
+            color: lighten($kolbe,16%);
+            border-color: darken($kolbe,5%);
+            
+                &:hover {
+                border-color: darken($kolbe,15%);
+                    
+                }
+        }
+        
+            input.search-field::-webkit-input-placeholder {
+            color: lighten($kolbe,16%);
+            }
+            input.search-field::-moz-placeholder {
+            color: lighten($kolbe,16%);
+            }
+            input.search-field:-moz-placeholder {
+            color: lighten($kolbe,16%);
+            }
+            input.search-field:-ms-placeholder  {
+            color: lighten($kolbe,16%);
+            }
+    }
+    .page-template-page_vojska header.banner .search-form{ 
+        input[type=search],
+        input[type=submit] {
+            background-color: $vojska;
+            color: lighten($vojska,16%);
+            border-color: darken($vojska,5%);
+            
+                &:hover {
+                border-color: darken($vojska,15%);
+                    
+                }
+        }
+        
+            input.search-field::-webkit-input-placeholder {
+            color: lighten($vojska,16%);
+            }
+            input.search-field::-moz-placeholder {
+            color: lighten($vojska,16%);
+            }
+            input.search-field:-moz-placeholder {
+            color: lighten($vojska,16%);
+            }
+            input.search-field:-ms-placeholder  {
+            color: lighten($vojska,16%);
+            }
+    }
+        
+    header.banner { 
+        
+        .search-form {
+            display: block;
+            float: right;
+            margin-top: 7px; 
+            
+            
+            input[type=search] {
+                background: $brand-primary;
+                border: 1px solid lighten($brand-primary,5%);
+                color: white;
+                color: lighten($brand-primary,57%);
+                &:hover {
+                    border: 1px solid lighten($brand-primary,15%);
+                    
+                }
+             }
+            
+            input[type=submit] {
+                background:url(../../assets/images/search-icon.png) no-repeat center center;
+                border: 1px solid lighten($brand-primary,5%);
+                text-indent:-999px;
+                margin-left:5px;
+                width:35px;
+                
+                &:hover {
+                border: 1px solid lighten($brand-primary,15%);
+                    
+                }
+             }
+            
+            
+            input.search-field::-webkit-input-placeholder {
+                color: lighten($brand-primary,10%);
+            }
+            input.search-field::-moz-placeholder {
+                color: lighten($brand-primary,10%);
+            }
+            input.search-field:-moz-placeholder {
+                color: lighten($brand-primary,10%);
+            }
+            input.search-field:-ms-placeholder  {
+                color: lighten($brand-primary,10%);
+            }
+                
+                &:hover {
+                    input.search-field::-webkit-input-placeholder {
+                        color: rgba(0,0,0,0.5)
+                    }
+                    input.search-field::-moz-placeholder {
+                        color: rgba(0,0,0,0.5)
+                    }
+                    input.search-field:-moz-placeholder {
+                        color: rgba(0,0,0,0.5)
+                    }
+                    input.search-field:-ms-placeholder  {
+                        color: rgba(0,0,0,0.5)
+                    }
+                }
+            
+        }
+        
+    }
+    
+    .menu-istaknuto {
+        
+        .four-menu {
+            .box {
+                width: auto !important;
+            }
+            h3 {
+                    width: auto !important;
+                    margin: 0 !important;
+            
+            }
+        }
+        
+    }
+    
+}

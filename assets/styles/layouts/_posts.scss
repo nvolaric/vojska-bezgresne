@@ -1,0 +1,343 @@
+
+
+.page-template-page_bezgresna {
+    .wrap.container {
+        background: $bezgresna;
+        h1.entry-title{
+            color: $bezgresna !important;  
+        }
+        blockquote {
+            border-left-color: $bezgresna;
+        }
+    }
+}
+
+.page-template-page_medaljica {
+    .wrap.container {
+        background: $medaljica;
+        h1.entry-title{
+            color: $medaljica !important; 
+        }
+        blockquote {
+            border-left-color: $medaljica;
+        }
+    }    
+}
+
+.page-template-page_kolbe {
+    .wrap.container {
+        background: $kolbe; 
+        h1.entry-title{
+            color: $kolbe !important; 
+        }
+        
+        blockquote {
+            border-left-color: $kolbe;
+        }
+    }  
+}
+
+.page-template-page_vojska {
+    .wrap.container {
+        background: $vojska; 
+        h1.entry-title{
+            color: $vojska !important; 
+        }
+        
+        blockquote {
+            border-left-color: $vojska;
+        }
+    }  
+}
+
+.container .search-form {
+        margin-left: 20px;
+    }
+.container footer {
+    clear: both;
+}
+
+.wrap.container {
+    background: $brand-primary;   
+    background: url(../../assets/images/white_wall_hash.png) repeat; 
+    background: #fbfbfb !important;
+    margin-bottom: 20px;
+        font-size: 1.4rem;
+    
+    .main {
+        background: #FFF; 
+        
+    }
+ 
+    article.bezgresna {
+        h1, h2, h3, h4, h5, h6, th, a {
+         color: darken($bezgresna,7%);        
+        }
+    }
+    
+     article.medaljica {
+        h1, h2, h3, h4, h5, h6, th, a {
+         color: darken($medaljica, 7%);        
+        }
+    }
+    
+     article.kolbe {
+        h1, h2, h3, h4, h5, h6, th, a {
+         color: $kolbe;        
+        }
+    }
+    
+     article.vojska {
+        h1, h2, h3, h4, h5, h6, th, a {
+         color: lighten($vojska,7%);        
+        }
+    }
+    
+    footer {
+       background: url(../../assets/images/white_wall_hash.png) repeat;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 5px 20px;
+    }
+
+
+    .aligncenter {
+        max-width: 100%;
+    }    
+    
+    .wp-caption-text {
+        text-align: center;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        font-size: 1.4rem;
+        
+    }
+    
+            color: #444;
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+    h1, h2, h3, h4, h5 {
+            border-bottom: 1px dotted #E8E8E8;
+            padding-bottom: 4px;            
+            text-align: left !important;
+        }
+    
+    main h1:before, main h2:before, main h3:before {
+            content:"";
+            display:block;
+            height:70px; /* fixed header height*/
+            margin:-70px 0 0; /* negative fixed header height */
+            }
+        h1.entry-title{
+            background: #fbfbfb;
+            color: $brand-primary !important;
+            font-size: 3rem;
+            margin: -20px -15px 20px -15px; 
+            padding: 20px 30px;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        }
+    
+         p { 
+             font-size: 1.7rem;
+             line-height: 2.3rem;
+             margin-bottom: 17px;
+             //font-family: Georgia, Times, 'Times New Roman', serif;
+
+         }
+        
+        blockquote {
+         /*   background: #f9f9f9;*/
+        //    background: url(../../assets/images/white_wall_hash.png) repeat;
+            background: #f9f9f9;
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+            p {
+            font-size: 1.6rem;
+                
+            }
+        }
+        
+        .entry-meta {
+            time {
+                span {
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    color: $brand-primary;
+                }
+                margin-right: 30px;
+            }
+        
+    }
+    
+    table {
+        th {background-color: #f0f0f0;font-weight:bold;color:$brand-primary; text-align: center;border: 1px solid #DDD;padding: 5px 15px;}
+        tbody tr:nth-of-type(2n) {background-color: #F8F8F8;}
+        td {padding: 5px 15px; border: 1px solid #EEE;}
+        
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    table {width:100%;}
+    tr:nth-of-type(2n) {background-color: inherit;}
+    tr td:first-child {background: #f0f0f0; font-weight:bold;font-size:1.3em;}
+    tbody td {display: block;  text-align:center;}
+    tbody td:before { 
+        content: attr(data-th); 
+        display: block;
+        text-align:center;  
+      }
+}
+
+
+@media only screen and (min-width: 768px) {
+    
+    body.page, body.single, body.single-post {
+      background: url(../../assets/images/white_wall_hash.png) repeat; 
+    }
+    
+    body.page-template-page_medaljica {
+       // background: darken($medaljica,6%);
+    }
+    
+    .wrap.container {  
+        border: #EEEEEE  1px solid;
+        @include border-radius(7px); 
+        margin-top: 50px;
+        
+        .main { 
+            min-height: 600px;
+            @include border-left-radius(7px); 
+            padding: 20px 30px;
+            border-right: #ededed 1px solid;
+            
+            h1.entry-title{
+              //  padding-top: 00px;
+                margin: -20px -30px 20px -30px; 
+            /* -webkit-border-top-left-radius: 7px;
+             border-top-left-radius: 7px;*/
+            }
+        }
+    
+            font-size: 1.7rem;
+            
+            h1.entry-title{
+                font-size: 4rem;
+            }
+             p { 
+                 font-size: 1.8rem;
+                 line-height: 2.6rem;
+             }
+    
+        .wp-caption-text {
+            text-align: center;
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+            font-size: 1.4rem;
+
+        }
+    } 
+    
+}
+
+@media only screen and (min-width: 992px) {
+    .wrap.container {  
+        .main {
+            padding: 20px 30px;
+            
+        }
+                 font-size: 1.8rem;
+                 line-height: 2.6rem;
+        
+            h1.entry-title{
+                font-size: 4.5rem;
+            }
+            h1 {
+                font-size: 4rem;                
+            }
+            h2 {
+                font-size: 3.7rem;                  
+            }
+            h3 {
+                font-size: 3rem;                  
+            }
+            h4 {
+                font-size: 2.7rem;                  
+            }
+            h5 {
+                font-size: 2.4rem;                  
+            }
+            h6 {
+                font-size: 2rem;                  
+            }
+            
+             p { 
+                 font-size: 1.8rem;
+                 line-height: 2.8rem;
+             }
+        }
+    
+}
+
+#swipebox-container {
+    background: darken($brand-primary,6%);
+    #swipebox-slider .slide img{
+        border: 2px solid #FFFFFF !important;
+    }
+}
+
+/* The Gallery container (div) */
+.gallery { }
+/* A Gallery item container,
+ for 3, 2 and 4 column galleries */
+.gallery .gallery-item { margin-bottom: 30px;}
+.gallery-columns-2 .gallery-item { }
+.gallery-columns-4 .gallery-item { }
+
+/* The actual image inside a container
+for 3, 2 and 4 column galleries */
+.gallery img { }
+.gallery-columns-2 .attachment-medium { }
+.gallery-columns-4 .attachment-thumbnail { }
+
+/* A gallery image caption */
+.gallery .gallery-caption { }
+
+/* Definition lists elements */
+.gallery dl, .gallery dt { }
+
+/* Pick the second line break if two
+line breaks are adjacent */
+.gallery br+br { }
+.gallery { margin: 0 auto 18px; }
+.gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+.gallery-columns-2 .gallery-item { width: 50%; }
+.gallery-columns-4 .gallery-item { width: 25%; }
+.gallery img {
+	box-shadow: 0px 0px 4px #999;
+	border: 1px solid white;
+	padding: 8px;
+	background: #f2f2f2;
+}
+.gallery img:hover {
+	background: white;
+}
+.gallery-columns-2 .attachment-medium {
+	max-width: 92%;
+	height: auto;
+}
+.gallery-columns-4 .attachment-thumbnail {
+	max-width: 84%;
+	height: auto;
+}
+.gallery .gallery-caption {
+	color: #888;
+	font-size: 12px;
+	margin: 0 0 12px;
+}
+.gallery dl, .gallery dt { margin: 0; }
+.gallery br+br { display: none; }
